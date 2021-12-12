@@ -1,0 +1,23 @@
+:root {
+  // Font
+  --main-font: Roboto, sans-serif;
+  --logo-font: Raleway, sans-serif;
+
+  // Color
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --accent-text-and-bg-color: #ffffff;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --footer-bg-color: #2f303a;
+  --section-bg-color: #f5f4fa;
+  --bg-color-card: #eeeeee;
+  --icon-color: #afb1b8;
+  --bg-icon-color: rgba(255, 255, 255, 0.1);
+  --btn-hover-color: #188ce8;
+  --overlay-card-color: rgba(33, 150, 243, 0.9);
+
+  // Transition
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

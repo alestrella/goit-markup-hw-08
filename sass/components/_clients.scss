@@ -1,0 +1,38 @@
+.client {
+  @include section(94px, 94px);
+}
+
+.client__heading {
+  @extend %heading;
+}
+
+.client__list {
+  display: flex;
+}
+
+.client__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client__link {
+  @include flex(flex, null, null, center, center);
+  width: 170px;
+  height: 92px;
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  @include transition(color, border-color, null, var(--duration), var(--timing-function));
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+
+.client__icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

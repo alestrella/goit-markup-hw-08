@@ -1,0 +1,34 @@
+.about {
+  @include section(0, 94px);
+}
+
+.about__heading {
+  @extend %heading;
+}
+
+.about__list {
+  display: flex;
+}
+
+.about__item {
+  position: relative;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.about__title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @include flex(flex, null, null, center, center);
+  margin-bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  text-transform: uppercase;
+  color: var(--accent-text-and-bg-color);
+  background: rgba(47, 48, 58, 0.8);
+}

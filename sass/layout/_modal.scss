@@ -1,0 +1,189 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  @include transition(opacity, null, null, var(--duration), var(--timing-function));
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  text-align: center;
+
+  background-color: var(--accent-text-and-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  @include transition(transform, null, null, var(--duration), var(--timing-function));
+
+  & .backdrop--is-hidden {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.icon__close {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.form__title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form__field {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form__field--textarea {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.form__wrap {
+  position: relative;
+}
+
+.form__input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  @include transition(border-color, null, null, var(--duration), var(--timing-function));
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  @include transition(fill, null, null, var(--duration), var(--timing-function));
+
+  .form__field:hover &,
+  .form__field:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.form__textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  @include transition(border-color, null, null, var(--duration), var(--timing-function));
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+}
+
+.form__checkbox {
+  margin-bottom: 30px;
+}
+
+.form__input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__label-checkbox {
+  @include flex(flex, null, null, center, center);
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.form__icon-check {
+  @include flex(flex, null, null, center, center);
+}
+
+.icon__check {
+  margin-right: 7px;
+
+  color: transparent;
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  cursor: pointer;
+
+  @include transition(background-color, border, null, var(--duration), var(--timing-function));
+
+  .form__input-checkbox:checked + .form__label-checkbox & {
+    background-color: var(--accent-color);
+    border: none;
+
+    @include transition(box-shadow, null, null, var(--duration), var(--timing-function));
+  }
+
+  .form__input-checkbox:focus:checked + .form__label-checkbox & {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+
+  .form__checkbox:hover &,
+  .form__checkbox:focus-within & {
+    border: 2px solid var(--accent-color);
+  }
+}
+
+.form__link {
+  color: var(--accent-color);
+}

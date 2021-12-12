@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+
+  &--header {
+    display: flex;
+  }
+
+  &--hero {
+    width: 696px;
+    text-align: center;
+  }
+
+  &--footer {
+    @include flex(flex, null, null, null, baseline);
+  }
+}

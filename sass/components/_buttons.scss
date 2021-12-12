@@ -1,0 +1,80 @@
+.btn {
+  padding: 10px 0;
+  min-width: 200px;
+  min-height: 50px;
+
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--accent-text-and-bg-color);
+  background-color: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include transition(color, background-color, box-shadow, var(--duration), var(--timing-function));
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.subs-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.modal__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  @include transition(color, box-shadow, transform, var(--duration), var(--timing-function));
+
+  transform: scale(1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    box-shadow: 0 8px 8px -6px var(--icon-color);
+    transform: translateY(-2px);
+  }
+}
+
+.filter__btn {
+  padding: 6px 22px;
+  font-weight: 500;
+  line-height: 1.62;
+
+  background-color: var(--section-bg-color);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include transition(color, background-color, box-shadow, var(--duration), var(--timing-function));
+
+  &:hover,
+  &:focus,
+  &--current {
+    background-color: var(--accent-color);
+    color: var(--accent-text-and-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

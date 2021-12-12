@@ -1,0 +1,20 @@
+.logo {
+  font-family: var(--logo-font);
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  color: var(--main-text-color);
+
+  @include transition(color, null, null, var(--duration), var(--timing-function));
+
+  &--accent {
+    color: var(--accent-color);
+    @include transition(color, null, null, var(--duration), var(--timing-function));
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

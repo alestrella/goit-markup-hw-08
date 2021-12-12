@@ -1,0 +1,8 @@
+.filter {
+  @include flex(flex, null, null, center, null);
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
