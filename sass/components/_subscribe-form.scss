@@ -1,5 +1,5 @@
 .subs-form {
-  @include flex(flex, null, null, null, end);
+  display: block;
   margin-left: auto;
 }
 
