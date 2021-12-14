@@ -1,14 +1,18 @@
 .portfolio__section {
-  @include section(94px, 94px);
+  @include section(60px, 60px);
+  // @include section(94px, 94px);
 }
 
 .portfolio {
-  @include list(flex, wrap, null, null, null, null, -15px);
+  @extend %list;
+
+  //   @include list(flex, wrap, null, null, null, null, -15px);
 }
 
 .portfolio-card {
-  margin: 15px;
-  flex-basis: calc((100% - 6 * 15px) / 3);
+  margin-bottom: 30px;
+  //   margin: 15px;
+  //   flex-basis: calc((100% - 6 * 15px) / 3);
 }
 
 .portfolio-card__link {

@@ -1,5 +1,11 @@
 .about {
-  @include section(0, 94px);
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section(0, 94px);
+  }
 }
 
 .about__heading {
@@ -7,6 +13,7 @@
 }
 
 .about__list {
+  @extend %list;
   display: flex;
 }
 

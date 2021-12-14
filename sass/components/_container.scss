@@ -1,19 +1,47 @@
 .container {
+  padding: 0 15px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
+}
 
-  &--header {
-    display: flex;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+
+    &--hero {
+      width: 360px;
+      padding: 0;
+      text-align: center;
+    }
+
+    &--footer {
+      text-align: center;
+    }
   }
+}
 
-  &--hero {
-    width: 696px;
-    text-align: center;
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+
+    &--footer {
+    }
   }
+}
 
-  &--footer {
-    @include flex(flex, null, null, null, baseline);
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+
+    &--header {
+      display: flex;
+    }
+
+    &--hero {
+      width: 696px;
+    }
+
+    &--footer {
+      @include flex(flex, null, null, null, baseline);
+    }
   }
 }

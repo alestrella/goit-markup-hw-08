@@ -1,5 +1,6 @@
 .client {
-  @include section(94px, 94px);
+  @include section(60px, 60px);
+  // @include section(94px, 94px);
 }
 
 .client__heading {
@@ -7,16 +8,25 @@
 }
 
 .client__list {
+  @extend %list;
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.client__item:not(:last-child) {
-  margin-right: 30px;
+.client__item {
+  width: calc(100% / 2 - 30px);
+  margin: 15px;
 }
+
+// .client__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .client__link {
+  @extend %link;
   @include flex(flex, null, null, center, center);
-  width: 170px;
+  flex-basis: 210px;
   height: 92px;
   color: var(--icon-color);
   border: 1px solid var(--icon-color);

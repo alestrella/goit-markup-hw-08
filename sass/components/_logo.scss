@@ -2,7 +2,7 @@
   font-family: var(--logo-font);
   font-size: 26px;
   line-height: 1.19;
-  text-decoration: none;
+  @extend %link;
 
   color: var(--main-text-color);
 

@@ -1,4 +1,5 @@
 .social {
+  @extend %list;
   @include flex(flex, null, null, center, null);
 }
 

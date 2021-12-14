@@ -3,12 +3,22 @@
   background-color: var(--footer-bg-color);
 }
 
-.footer__wrap {
-  @include flex(flex, null, null, null, baseline);
+.footer-tablet {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, null, space-around, baseline);
+  }
 }
 
-.footer__main {
-  margin-right: 70px;
+.footer__wrap:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.footer__wrap--main {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .footer__logo {
@@ -17,8 +27,16 @@
   color: var(--accent-text-and-bg-color);
 }
 
+.footer__main-contact {
+  @extend %list;
+}
+
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__link {
@@ -26,6 +44,7 @@
   line-height: 1.71;
   font-style: normal;
   color: var(--footer-text-color);
+  @extend %link;
 
   @include transition(color, null, null, var(--duration), var(--timing-function));
 
@@ -40,7 +59,7 @@
   line-height: 1.71;
   font-style: normal;
   color: var(--accent-text-and-bg-color);
-  text-decoration: none;
+  @extend %link;
 
   @include transition(color, null, null, var(--duration), var(--timing-function));
 

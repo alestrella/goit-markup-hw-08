@@ -1,8 +1,27 @@
 .filter {
-  @include flex(flex, null, null, center, null);
-  margin-bottom: 50px;
+  @extend %list;
+  @include flex(flex, wrap, null, null, null);
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }

@@ -1,14 +1,25 @@
 .feature {
-  @include section(94px, 94px);
+  @include section(60px, 60px);
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
 }
 
 .feature__list {
-  @include list(flex, wrap, null, null, -30px, null, null);
+  @extend %list;
+  // @include list(flex, wrap, null, null, -30px, null, null);
+}
+
+@media screen and (max-width: 767px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .feature__item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
-  margin-right: 30px;
+  //   flex-basis: calc((100% - 4 * 30px) / 4);
+  //   margin-right: 30px;
 }
 
 .feature__thumb {
@@ -32,6 +43,7 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .feature__text {
