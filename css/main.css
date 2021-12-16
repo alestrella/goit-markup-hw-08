@@ -83,6 +83,10 @@ input:-webkit-autofill:active {
   color: var(--main-text-color);
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -112,9 +116,13 @@ input:-webkit-autofill:active {
 }
 
 .container--hero {
-  width: 360px;
   text-align: center;
-  padding: 0;
+}
+@media screen and (min-width: 480px) {
+  .container--hero {
+    max-width: 360px;
+    padding: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container--hero {
@@ -900,8 +908,10 @@ input:-webkit-autofill:active {
           transition-duration: var(--duration);
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
+  overflow-y: scroll;
 }
-.backdrop--is-hidden {
+
+.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -928,10 +938,6 @@ input:-webkit-autofill:active {
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
 }
-.modal .backdrop--is-hidden {
-  -webkit-transform: translate(-50%, -50%) scale(1.2);
-          transform: translate(-50%, -50%) scale(1.2);
-}
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
@@ -941,6 +947,10 @@ input:-webkit-autofill:active {
   .modal {
     width: 528px;
   }
+}
+.modal .is-hidden {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
 }
 
 .icon__close {
@@ -1092,6 +1102,7 @@ input:-webkit-autofill:active {
           align-items: center;
   font-size: 12px;
   line-height: 1.17;
+  text-align: left;
 }
 @media screen and (min-width: 1200px) {
   .form__label-checkbox {

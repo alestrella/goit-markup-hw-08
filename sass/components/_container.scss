@@ -22,9 +22,12 @@
 }
 
 .container--hero {
-  width: 360px;
   text-align: center;
-  padding: 0;
+
+  @media screen and (min-width: 480px) {
+    max-width: 360px;
+    padding: 0;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 696px;
