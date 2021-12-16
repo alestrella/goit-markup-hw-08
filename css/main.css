@@ -276,7 +276,7 @@ input:-webkit-autofill:active {
   min-width: 200px;
   min-height: 50px;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
   text-align: center;
   font-weight: 700;
   line-height: 1.87;
@@ -910,8 +910,7 @@ input:-webkit-autofill:active {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 528px;
-  height: 581px;
+  width: 90%;
   padding: 40px;
   text-align: center;
   background-color: var(--accent-text-and-bg-color);
@@ -933,6 +932,16 @@ input:-webkit-autofill:active {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
 
 .icon__close {
   width: 18px;
@@ -945,6 +954,7 @@ input:-webkit-autofill:active {
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.5;
 }
 
 .form__field {
@@ -1080,8 +1090,14 @@ input:-webkit-autofill:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .form__label-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__icon-check {
