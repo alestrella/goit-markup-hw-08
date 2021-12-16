@@ -1,11 +1,10 @@
 .filter {
   @extend %list;
-  @include flex(flex, wrap, null, null, null);
-  margin-bottom: 40px;
+  @include list(flex, wrap, null, null, null, 40px, null);
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 30px;
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: 1200px) {

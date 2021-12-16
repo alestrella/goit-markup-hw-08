@@ -18,13 +18,11 @@
 }
 
 .container--header {
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
+  display: flex;
 }
 
 .container--hero {
-  min-width: 360px;
+  width: 360px;
   text-align: center;
   padding: 0;
 
@@ -35,11 +33,9 @@
 
 .container--footer {
   text-align: center;
-  // @media screen and (max-width: 1199px) {
-  //   text-align: center;
-  // }
 
   @media screen and (min-width: 1200px) {
     @include flex(flex, null, null, null, baseline);
+    text-align: left;
   }
 }

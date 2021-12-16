@@ -1,22 +1,37 @@
 .portfolio__section {
   @include section(60px, 60px);
-  // @include section(94px, 94px);
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
 }
 
 .portfolio {
   @extend %list;
+  margin: -15px;
 
-  //   @include list(flex, wrap, null, null, null, null, -15px);
+  @media screen and (min-width: 768px) {
+    @include list(flex, wrap, null, null, null, null, null);
+  }
 }
 
 .portfolio-card {
-  margin-bottom: 30px;
-  //   margin: 15px;
-  //   flex-basis: calc((100% - 6 * 15px) / 3);
+  margin: 15px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .portfolio-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   color: var(--main-text-color);
   text-decoration: none;
 
@@ -49,19 +64,19 @@
 
   overflow-y: auto;
 
-  &__text {
-    padding: 63px 24px 24px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.56;
-
-    color: var(--accent-text-and-bg-color);
-  }
-
   .portfolio-card__link:hover &,
   .portfolio-card__link:focus & {
     transform: translateY(0);
   }
+}
+
+.overlay__text {
+  padding: 63px 24px 24px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--accent-text-and-bg-color);
 }
 
 .portfolio-card__body {
