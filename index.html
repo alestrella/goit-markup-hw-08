@@ -7,6 +7,7 @@
     <title>Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
@@ -294,50 +295,53 @@
         <div class="container">
           <h2 class="client__heading">Постоянные клиенты</h2>
       
-          <ul class="client__list">
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-3"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-4"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-5"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="client__item">
-              <a class="client__link" href="">
-                <svg class="client__icon">
-                  <use href="./images/icons.svg#client-6"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="swiper mySwiper">
+            <ul class="client__list swiper-wrapper">
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-3"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-4"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-5"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="client__item swiper-slide">
+                <a class="client__link" href="">
+                  <svg class="client__icon">
+                    <use href="./images/icons.svg#client-6"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
 
@@ -484,6 +488,8 @@
     </div>
 
     <script src="./js/header-fixed.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/js-speaker-form.js"></script>
   </body>

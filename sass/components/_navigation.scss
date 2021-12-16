@@ -1,7 +1,8 @@
-// .nav {
-//   display: flex;
-//   margin-right: auto;
-// }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  //   margin-right: auto;
+}
 
 .menu {
   @extend %list;
