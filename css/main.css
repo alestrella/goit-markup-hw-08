@@ -482,6 +482,10 @@ input:-webkit-autofill:active {
   }
 }
 
+.swiper-horizontal > .swiper-pagination {
+  bottom: -2px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -892,6 +896,8 @@ input:-webkit-autofill:active {
   z-index: 3;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition-property: opacity;
@@ -900,7 +906,6 @@ input:-webkit-autofill:active {
           transition-duration: var(--duration);
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
-  overflow-y: scroll;
 }
 
 .is-hidden {

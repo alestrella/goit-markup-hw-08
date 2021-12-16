@@ -6,12 +6,13 @@
   width: 100%;
   height: 100%;
 
+  padding: 93px 15px;
+  overflow-y: scroll;
+
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
   @include transition(opacity, null, null, var(--duration), var(--timing-function));
-
-  overflow-y: scroll;
 }
 
 .is-hidden {
