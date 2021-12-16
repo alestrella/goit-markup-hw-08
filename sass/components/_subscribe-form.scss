@@ -1,6 +1,16 @@
 .subs-form {
-  //   display: block;
-  //   margin-left: auto;
+  // max-width: 450px;
+  // margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    // margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: auto;
+    width: 570px;
+  }
 }
 
 .subs-form__field {
