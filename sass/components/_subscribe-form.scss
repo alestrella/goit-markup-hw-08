@@ -1,17 +1,17 @@
 .subs-form {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 450px;
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     width: 570px;
     margin: 0;
   }
 }
 
 .subs-form__field {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
 }
@@ -35,7 +35,7 @@
     outline: -webkit-focus-ring-color auto 0px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 12px;
     margin-bottom: 0;
   }

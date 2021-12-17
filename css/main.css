@@ -914,35 +914,37 @@ input:-webkit-autofill:active {
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 90%;
-  padding: 40px;
+  position: relative;
+  padding: 35px 20px;
   text-align: center;
   background-color: var(--accent-text-and-bg-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: var(--duration);
-          transition-duration: var(--duration);
-  -webkit-transition-timing-function: var(--timing-function);
-          transition-timing-function: var(--timing-function);
 }
 @media screen and (min-width: 480px) {
   .modal {
-    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+    -webkit-transition-timing-function: var(--timing-function);
+            transition-timing-function: var(--timing-function);
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
   }
 }
 .modal .is-hidden {
@@ -1109,18 +1111,6 @@ input:-webkit-autofill:active {
 }
 
 .form__icon-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.icon__check {
   margin-right: 7px;
   color: transparent;
   border: 2px solid var(--main-text-color);
@@ -1133,7 +1123,7 @@ input:-webkit-autofill:active {
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
 }
-.form__input-checkbox:checked + .form__label-checkbox .icon__check {
+.form__input-checkbox:checked + .form__label-checkbox .form__icon-check {
   background-color: var(--accent-color);
   border: none;
   -webkit-transition-property: -webkit-box-shadow;
@@ -1145,12 +1135,12 @@ input:-webkit-autofill:active {
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
 }
-.form__input-checkbox:focus:checked + .form__label-checkbox .icon__check {
+.form__input-checkbox:focus:checked + .form__label-checkbox .form__icon-check {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   outline: -webkit-focus-ring-color auto 0px;
 }
-.form__checkbox:hover .icon__check, .form__checkbox:focus-within .icon__check {
+.form__checkbox:hover .form__icon-check, .form__checkbox:focus-within .form__icon-check {
   border: 2px solid var(--accent-color);
 }
 

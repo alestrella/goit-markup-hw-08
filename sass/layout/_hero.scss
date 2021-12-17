@@ -11,7 +11,7 @@
   background-position: center;
   background-size: cover;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     max-width: 1600px;
   }
 }
@@ -26,7 +26,7 @@
 
   color: var(--accent-text-and-bg-color);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: 44px;
     line-height: 1.36;
   }
