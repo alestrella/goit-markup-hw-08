@@ -1,19 +1,32 @@
 .contact {
   @extend %list;
-  // display: flex;
+
+  .header & {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
 }
 
 .contact__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
+  }
 }
 
 .contact__link {
-  // @include flex(flex, null, null, null, center);
-  // padding: 32px 0;
-
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   @extend %link;
 
@@ -22,6 +35,27 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+    @include flex(flex, null, null, null, center);
+    padding: 10px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 32px 0;
+  }
+}
+
+.contact__link--phone {
+  font-size: 30px;
+  line-height: 1.18;
+  color: var(--accent-color);
+
+  @media screen and (min-width: $mobile) {
+    font-size: 34px;
   }
 }
 

@@ -1,0 +1,23 @@
+.menu-social {
+  @extend %list;
+  @include flex(flex, wrap, null, center, null);
+  margin-top: 64px;
+}
+
+.menu-social__link {
+  @extend %link;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.22px;
+  color: var(--accent-color);
+
+  @media screen and (min-width: $mobile) {
+    font-size: 18px;
+  }
+}
+
+.menu-social__item + .menu-social__item::before {
+  content: '';
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

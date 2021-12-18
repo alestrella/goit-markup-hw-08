@@ -1,0 +1,33 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  @include flex(flex, null, column, space-between, null);
+  padding: 48px 30px;
+  background-color: var(--accent-text-and-bg-color);
+  z-index: 10;
+
+  transform: translateX(100%);
+  @include transition(transform, null, null, var(--duration), var(--timing-function));
+
+  @media screen and (min-width: $mobile) {
+    padding: 48px 40px;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu__icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

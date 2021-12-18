@@ -18,7 +18,14 @@
 }
 
 .container--header {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
 }
 
 .container--hero {
@@ -30,7 +37,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 696px;
+    max-width: 696px;
   }
 }
 
