@@ -1,7 +1,7 @@
 .contact {
   @extend %list;
 
-  .header & {
+  .wrap-contact & {
     @media screen and (max-width: 767px) {
       display: none;
     }
