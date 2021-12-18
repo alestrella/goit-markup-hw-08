@@ -1,11 +1,10 @@
 var swiper = new Swiper(".mySwiper", {
         slidesPerView: 2,
-  spaceBetween: 10,
+        spaceBetween: 10,
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
         },
-        loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
