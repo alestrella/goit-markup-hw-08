@@ -29,8 +29,7 @@
 }
 
 .portfolio-card__link {
-  display: flex;
-  flex-direction: column;
+  @include flex(flex, null, column, null, null);
   height: 100%;
   color: var(--main-text-color);
   text-decoration: none;
@@ -46,7 +45,6 @@
 
 .portfolio-card__thumb {
   position: relative;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -83,6 +81,7 @@
   padding: 20px 24px;
   border: 1px solid var(--bg-color-card);
   border-top: 0;
+  flex-grow: 1;
 }
 
 .portfolio-card__title {

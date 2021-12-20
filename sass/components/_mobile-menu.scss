@@ -25,9 +25,32 @@
   width: 40px;
   height: 40px;
   fill: currentColor;
+  @include transition(fill, null, null, var(--duration), var(--timing-function));
 
-  &:hover,
-  &:focus {
+  .menu__btn-open:hover &,
+  .menu__btn-open:focus &,
+  .menu__btn-close:hover &,
+  .menu__btn-close:focus & {
+    color: var(--accent-color);
+  }
+}
+
+.menu__top {
+  margin-bottom: 20px;
+
+  .menu__link {
+    font-size: 10vw;
+  }
+}
+
+.menu__bottom {
+  .contact__link {
+    font-size: 6vw;
+  }
+
+  .contact__link--phone {
+    font-size: 9vw;
+    line-height: 1.18;
     color: var(--accent-color);
   }
 }

@@ -36,61 +36,20 @@
         <div class="wrap-contact">
           <ul class="contact">
             <li class="contact__item">
-              <a href="mailto:info@devstudio.com" class="contact__link">
+              <a href="mailto:info@devstudio.com" class="contact__link contact__link--mail">
                 <svg class="contact__icon" width="16" height="16">
                   <use href="./images/icons.svg#envelope"></use>
                 </svg>info@devstudio.com
               </a>
             </li>
             <li class="contact__item">
-              <a href="tel:+380961111111" class="contact__link">
+              <a href="tel:+380961111111" class="contact__link contact__link--phone">
                 <svg class="contact__icon" width="16" height="16">
                   <use href="./images/icons.svg#smartphone"></use>
                 </svg>+38 096 111 11 11
               </a>
             </li>
           </ul>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
-              <button type="button" class="menu__btn-close js-close-menu">
-                <svg class="menu__icon" aria-label="Переключатель мобильного меню">
-                  <use class="icon-cross" href="./images/icons.svg#cross"></use>
-                </svg>
-              </button>
-            
-              <ul class="menu">
-                <li class="menu__item"><a href="./index.html" class="menu__link menu__item--current">Студия</a></li>
-                <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфолио</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-              </ul>
-            
-              <div class="menu__bottom">
-                <ul class="contact">
-                  <li class="contact__item">
-                    <a href="tel:+380961111111" class="contact__link contact__link--phone">+38 096 111 11 11</a>
-                  </li>
-                  <li class="contact__item">
-                    <a href="mailto:info@devstudio.com" class="contact__link">info@devstudio.com</a>
-                  </li>
-                </ul>
-            
-                <ul class="menu-social">
-                  <li class="menu-social__item">
-                    <a class="menu-social__link" href="">Instagram</a>
-                  </li>
-                  <li class="menu-social__item">
-                    <a class="menu-social__link" href="">Twitter</a>
-                  </li>
-                  <li class="menu-social__item">
-                    <a class="menu-social__link" href="">Facebook</a>
-                  </li>
-                  <li class="menu-social__item">
-                    <a class="menu-social__link" href="">LinkedIn</a>
-                  </li>
-                </ul>
-              </div>
         </div>
       </div>
     </header>
@@ -398,78 +357,123 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container container--footer">
-        
-        <div class="footer-tablet">
 
-          <!-- Main info -->
-          <div class="footer__wrap footer__wrap--main">
-          
-            <!-- Footer Logo -->
-            <a class="logo footer__logo" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
-          
-            <!-- Address and contacts -->
-            <address>
-              <ul class="footer__main-contact">
-                <li class="footer__item"><a class="footer__address" href="https://goo.gl/maps/BrZeRLE5wpfTbAKm7"
-                    rel="nofollow noopener noreferrer">г. Киев, пр-т
-                    Леси Украинки, 26</a></li>
-                <li class="footer__item"><a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a></li>
-                <li class="footer__item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a></li>
+          <div class="footer__contact">
+            <!-- Main info -->
+            <div class="footer__wrap">
+            
+              <!-- Footer Logo -->
+              <a class="logo footer__logo" href="./index.html" lang="en"><span class="logo--accent">Web</span>Studio</a>
+            
+              <!-- Address and contacts -->
+              <address>
+                <ul class="footer__main-info">
+                  <li class="footer__item"><a class="footer__address" href="https://goo.gl/maps/BrZeRLE5wpfTbAKm7"
+                      rel="nofollow noopener noreferrer">г. Киев, пр-т
+                      Леси Украинки, 26</a></li>
+                  <li class="footer__item"><a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a></li>
+                  <li class="footer__item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a></li>
+                </ul>
+              </address>
+            </div>
+            
+            <!-- Socials -->
+            <div class="footer__wrap">
+              <strong class="footer__title">присоединяйтесь</strong>
+              <ul class="social">
+                <li class="social__item">
+                  <a class="social__link social__link--footer" href="">
+                    <svg class="social__icon">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--footer" href="">
+                    <svg class="social__icon">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--footer" href="">
+                    <svg class="social__icon">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--footer" href="">
+                    <svg class="social__icon">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
               </ul>
-            </address>
+            </div>
           </div>
-          
-          <!-- Socials -->
-          <div class="footer__wrap">
-            <strong class="footer__title">присоединяйтесь</strong>
-            <ul class="social">
-              <li class="social__item">
-                <a class="social__link social__link--footer" href="">
-                  <svg class="social__icon">
-                    <use href="./images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--footer" href="">
-                  <svg class="social__icon">
-                    <use href="./images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--footer" href="">
-                  <svg class="social__icon">
-                    <use href="./images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--footer" href="">
-                  <svg class="social__icon">
-                    <use href="./images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
 
         <!-- Subscribe -->
-        <form action="#" class="subs-form js-speaker-form">
-          <label for="subs" class="subs-form__title footer__title">Подпишитесь на рассылку</label>
-          <div class="subs-form__field">
-            <input class="subs-form__input" type="email" name="email" id="subs" placeholder="Email">
-            <button type="submit" class="btn subs-form__btn">Подписаться
-              <svg class="subs-form__icon" width="24" height="24">
-                <use href="./images/icons.svg#send"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
+        <div class="footer__form">
+          <form action="#" class="subs-form js-speaker-form">
+            <label for="subs" class="subs-form__title footer__title">Подпишитесь на рассылку</label>
+            <div class="subs-form__field">
+              <input class="subs-form__input" type="email" name="email" id="subs" placeholder="Email">
+              <button type="submit" class="btn subs-form__btn">Подписаться
+                <svg class="subs-form__icon" width="24" height="24">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
 
       </div>
     </footer> 
+
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+      <button type="button" class="menu__btn-close js-close-menu">
+        <svg class="menu__icon" aria-label="Переключатель мобильного меню">
+          <use class="icon-cross" href="./images/icons.svg#cross"></use>
+        </svg>
+      </button>
+    
+      <div class="menu__top">
+        <ul class="menu">
+          <li class="menu__item"><a href="./index.html" class="menu__link menu__item--current">Студия</a></li>
+          <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфолио</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+        </ul>
+      </div>
+    
+      <div class="menu__bottom">
+        <ul class="contact">
+          <li class="contact__item">
+            <a href="tel:+380961111111" class="contact__link contact__link--phone">+38 096 111 11 11</a>
+          </li>
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link">info@devstudio.com</a>
+          </li>
+        </ul>
+    
+        <!-- Mobile Social -->
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Twitter</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">Facebook</a>
+          </li>
+          <li class="menu-social__item">
+            <a class="menu-social__link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     
     <!-- Modal Box -->
     <div class="backdrop is-hidden" data-modal>

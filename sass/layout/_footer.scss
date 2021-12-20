@@ -3,7 +3,7 @@
   background-color: var(--footer-bg-color);
 }
 
-.footer-tablet {
+.footer__contact {
   margin-bottom: 60px;
 
   @media screen and (min-width: $tablet) {
@@ -17,10 +17,12 @@
 }
 
 .footer__wrap:not(:last-child) {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
-.footer__wrap--main {
+.footer__wrap:first-child {
   @media screen and (min-width: $desktop) {
     margin-right: 70px;
   }
@@ -32,7 +34,7 @@
   color: var(--accent-text-and-bg-color);
 }
 
-.footer__main-contact {
+.footer__main-info {
   @extend %list;
 }
 
@@ -84,4 +86,16 @@
   line-height: 1.14;
   text-transform: uppercase;
   cursor: default;
+}
+
+.footer__form {
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 570px;
+    margin: 0;
+  }
 }
