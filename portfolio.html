@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body class="body">
 
     <!-- Header -->
-        <header class="header">
-            <div class="container container--header">
-                <nav class="nav">
-                    <a href="./index.html" class="logo header__logo" lang="en"><span class="logo--accent">Web</span>Studio</a>
-        
-                    <button type="button" class="menu__btn-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu"
-                        data-menu-button>
-                        <svg class="menu__icon" aria-label="Переключатель мобильного меню">
-                            <use class="icon-menu" href="./images/icons.svg#menu"></use>
-                        </svg>
-                    </button>
-        
-                    <ul class="menu">
-                        <li class="menu__item"><a href="./index.html" class="menu__link">Студия</a></li>
-                        <li class="menu__item"><a href="./portfolio.html" class="menu__link menu__item--current">Портфолио</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-                    </ul>
-                </nav>
-        
-                <div class="wrap-contact">
-                    <ul class="contact">
-                        <li class="contact__item">
-                            <a href="mailto:info@devstudio.com" class="contact__link contact__link--mail">
-                                <svg class="contact__icon" width="16" height="16">
-                                    <use href="./images/icons.svg#envelope"></use>
-                                </svg>info@devstudio.com
-                            </a>
-                        </li>
-                        <li class="contact__item">
-                            <a href="tel:+380961111111" class="contact__link contact__link--phone">
-                                <svg class="contact__icon" width="16" height="16">
-                                    <use href="./images/icons.svg#smartphone"></use>
-                                </svg>+38 096 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="header">
+        <div class="container container--header">
+            <nav class="nav">
+                <a href="./index.html" class="logo header__logo" lang="en"><span
+                        class="logo--accent">Web</span>Studio</a>
+
+                <button type="button" class="menu__btn-open js-open-menu" aria-expanded="false"
+                    aria-controls="mobile-menu" data-menu-button>
+                    <svg class="menu__icon" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./images/icons.svg#menu"></use>
+                    </svg>
+                </button>
+
+                <ul class="menu">
+                    <li class="menu__item"><a href="./index.html" class="menu__link">Студия</a></li>
+                    <li class="menu__item"><a href="./portfolio.html"
+                            class="menu__link menu__item--current">Портфолио</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="wrap-contact">
+                <ul class="contact">
+                    <li class="contact__item">
+                        <a href="mailto:info@devstudio.com" class="contact__link contact__link--mail">
+                            <svg class="contact__icon" width="16" height="16">
+                                <use href="./images/icons.svg#envelope"></use>
+                            </svg>info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a href="tel:+380961111111" class="contact__link contact__link--phone">
+                            <svg class="contact__icon" width="16" height="16">
+                                <use href="./images/icons.svg#smartphone"></use>
+                            </svg>+38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </header>
 
     <!-- Main content -->
     <main class="main">
@@ -62,74 +67,91 @@
 
             <div class="container">
 
-            <!-- Filter -->
+                <!-- Filter -->
                 <ul class="filter">
                     <li class="filter__item">
-                        <button type="button" class="filter__btn filter__btn--current">Все</button>
+                        <button type="button" class="filter__btn filter__btn--current" data-value="all">Все</button>
                     </li>
                     <li class="filter__item">
-                        <button type="button" class="filter__btn">Веб-сайты</button>
+                        <button type="button" class="filter__btn" data-value="website">Веб-сайты</button>
                     </li>
                     <li class="filter__item">
-                        <button type="button" class="filter__btn">Приложения</button>
+                        <button type="button" class="filter__btn" data-value="app">Приложения</button>
                     </li>
                     <li class="filter__item">
-                        <button type="button" class="filter__btn">Дизайн</button>
+                        <button type="button" class="filter__btn" data-value="design">Дизайн</button>
                     </li>
                     <li class="filter__item">
-                        <button type="button" class="filter__btn">Маркетинг</button>
+                        <button type="button" class="filter__btn" data-value="marketing">Маркетинг</button>
                     </li>
                 </ul>
-            
-            <!-- Examples -->
+
+                <!-- Examples -->
                 <ul class="portfolio">
-                    <li class="portfolio-card">
+                    <!-- <li class="portfolio-card">
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/technocrack-370x294.jpg 1x, ./images/portfolio/technocrack-370x294@2x.jpg 2x" 
+                                    <source
+                                        srcset="./images/portfolio/technocrack-370x294.jpg 1x, ./images/portfolio/technocrack-370x294@2x.jpg 2x"
                                         media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/technocrack-354x294.jpg 1x, ./images/portfolio/technocrack-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/technocrack-354x294.jpg 1x, ./images/portfolio/technocrack-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/technocrack-450x294.jpg 1x, ./images/portfolio/technocrack-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/technocrack-450x294.jpg 1x, ./images/portfolio/technocrack-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/technocrack-450x294.jpg" alt="Ноутбук с изображением веб-сайта на экране">
+                                    <img class="img" src="./images/portfolio/technocrack-450x294.jpg"
+                                        alt="Ноутбук с изображением веб-сайта на экране">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
+                                    <p class="overlay__text">Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу
                                         для цифрового
                                         шпионажа и атак на защищённые сервера конкурентов.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
                                 <h2 class="portfolio-card__title">Технокряк</h2>
                                 <p class="portfolio-card__text">Веб-сайт</p>
                             </div>
                         </a>
-                
+
                     </li>
-                    <li  class="portfolio-card">
+                    <li class="portfolio-card">
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/poster-370x294.jpg 1x, ./images/portfolio/poster-370x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/poster-370x294.jpg 1x, ./images/portfolio/poster-370x294@2x.jpg 2x"
                                         media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/poster-354x294.jpg 1x, ./images/portfolio/poster-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/poster-354x294.jpg 1x, ./images/portfolio/poster-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/poster-450x294.jpg 1x, ./images/portfolio/poster-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/poster-450x294.jpg 1x, ./images/portfolio/poster-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                        <img class="img" src="./images/portfolio/poster-450x294.jpg" alt="">
+                                    <img class="img" src="./images/portfolio/poster-450x294.jpg" alt="">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quaerat. Laboriosam iusto, magni deleniti doloribus voluptates quas dolorem recusandae atque, non inventore earum cumque provident, porro ab obcaecati neque eaque!
-                                    Quos magnam pariatur veniam vel earum, consequatur ipsa! Rem, soluta! Mollitia commodi et at placeat accusamus rerum magni, doloribus libero, beatae assumenda sint voluptatibus voluptates facilis sit quae, necessitatibus consequatur.
-                                    Molestias id voluptas itaque eveniet soluta officiis amet omnis iste recusandae nisi eum quos est eligendi vero reprehenderit culpa, inventore maiores, doloremque ratione qui architecto. Soluta obcaecati necessitatibus dolor vitae!</p>
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Illum, quaerat. Laboriosam iusto, magni deleniti doloribus voluptates quas
+                                        dolorem recusandae atque, non inventore earum cumque provident, porro ab
+                                        obcaecati neque eaque!
+                                        Quos magnam pariatur veniam vel earum, consequatur ipsa! Rem, soluta! Mollitia
+                                        commodi et at placeat accusamus rerum magni, doloribus libero, beatae assumenda
+                                        sint voluptatibus voluptates facilis sit quae, necessitatibus consequatur.
+                                        Molestias id voluptas itaque eveniet soluta officiis amet omnis iste recusandae
+                                        nisi eum quos est eligendi vero reprehenderit culpa, inventore maiores,
+                                        doloremque ratione qui architecto. Soluta obcaecati necessitatibus dolor vitae!
+                                    </p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
-                                <h2 class="portfolio-card__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                                <h2 class="portfolio-card__title">Постер <span lang="en">New Orlean vs Golden
+                                        Star</span></h2>
                                 <p class="portfolio-card__text">Дизайн</p>
                             </div>
                         </a>
@@ -138,16 +160,22 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/seafood-370x294.jpg 1x, ./images/portfolio/seafood-370x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/seafood-370x294.jpg 1x, ./images/portfolio/seafood-370x294@2x.jpg 2x"
                                         media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/seafood-354x294.jpg 1x, ./images/portfolio/seafood-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/seafood-354x294.jpg 1x, ./images/portfolio/seafood-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/seafood-450x294.jpg 1x, ./images/portfolio/seafood-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/seafood-450x294.jpg 1x, ./images/portfolio/seafood-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/seafood-354x294.jpg" alt="Название ресторано с рыбой на заднем плане">
+                                    <img class="img" src="./images/portfolio/seafood-354x294.jpg"
+                                        alt="Название ресторано с рыбой на заднем плане">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad possimus obcaecati, blanditiis consequuntur in dolo ab autem veniam, ullam velit voluptates alias neque nesciunt eveniet repudiandae quisquam!</p>
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Tenetur ad possimus obcaecati, blanditiis consequuntur in dolo ab autem veniam,
+                                        ullam velit voluptates alias neque nesciunt eveniet repudiandae quisquam!</p>
                                 </div>
                             </div>
                             <div class="portfolio-card__body">
@@ -160,16 +188,22 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/prime-370x294.jpg 1x, ./images/portfolio/prime-370x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/prime-370x294.jpg 1x, ./images/portfolio/prime-370x294@2x.jpg 2x"
                                         media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/prime-354x294.jpg 1x, ./images/portfolio/prime-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/prime-354x294.jpg 1x, ./images/portfolio/prime-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/prime-450x294.jpg 1x, ./images/portfolio/prime-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/prime-450x294.jpg 1x, ./images/portfolio/prime-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/prime-450x294.jpg" alt="Черные накладные наушники">
+                                    <img class="img" src="./images/portfolio/prime-450x294.jpg"
+                                        alt="Черные накладные наушники">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam fugit cumque, incidunt officia necessitatibus dolor dolorem numquam voluptas odit aperiam dolores odio quisquam consequatur beatae iusto!</p>
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Earum nam fugit cumque, incidunt officia necessitatibus dolor dolorem numquam
+                                        voluptas odit aperiam dolores odio quisquam consequatur beatae iusto!</p>
                                 </div>
                             </div>
                             <div class="portfolio-card__body">
@@ -182,17 +216,26 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/boxes-370x294.jpg 1x, ./images/portfolio/boxes-370x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/boxes-370x294.jpg 1x, ./images/portfolio/boxes-370x294@2x.jpg 2x"
                                         media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/boxes-354x294.jpg 1x, ./images/portfolio/boxes-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/boxes-354x294.jpg 1x, ./images/portfolio/boxes-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/boxes-450x294.jpg 1x, ./images/portfolio/boxes-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/boxes-450x294.jpg 1x, ./images/portfolio/boxes-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/boxes-450x294.jpg" alt="Белая и коричневая коробки">
+                                    <img class="img" src="./images/portfolio/boxes-450x294.jpg"
+                                        alt="Белая и коричневая коробки">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum qui, nisi minus recusandae nostrum aliquam veritatis. Ducimus quisquam voluptas deserunt accusantium excepturi, temporibus eaque similique iste commodi nemo, facere modi? Provident quasi facere sunt, illum facilis consectetur molestiae delectus perferendis ut! Libero perferendis accusamus
-                                    illum, in expedita, id quisquam excepturi, beatae nesciunt assumenda ad eum ipsum recusandae dolor quod nam.</p>
+                                    <p class="overlay__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptatum qui, nisi minus recusandae nostrum aliquam veritatis. Ducimus
+                                        quisquam voluptas deserunt accusantium excepturi, temporibus eaque similique
+                                        iste commodi nemo, facere modi? Provident quasi facere sunt, illum facilis
+                                        consectetur molestiae delectus perferendis ut! Libero perferendis accusamus
+                                        illum, in expedita, id quisquam excepturi, beatae nesciunt assumenda ad eum
+                                        ipsum recusandae dolor quod nam.</p>
                                 </div>
                             </div>
                             <div class="portfolio-card__body">
@@ -205,19 +248,24 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/inspiration-370x294.jpg 1x, ./images/portfolio/inspiration-370x294@2x.jpg 2x" media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/inspiration-354x294.jpg 1x, ./images/portfolio/inspiration-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/inspiration-370x294.jpg 1x, ./images/portfolio/inspiration-370x294@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/inspiration-354x294.jpg 1x, ./images/portfolio/inspiration-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/inspiration-450x294.jpg 1x, ./images/portfolio/inspiration-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/inspiration-450x294.jpg 1x, ./images/portfolio/inspiration-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
                                     <img class="img" src="./images/portfolio/inspiration-450x294.jpg" alt="Монитор">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam fugit cumque enim,
-                                            incidunt officia necessitatibus dolor natus quia!</p>
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Earum nam fugit cumque enim,
+                                        incidunt officia necessitatibus dolor natus quia!</p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
                                 <h2 class="portfolio-card__title" lang="en">Inspiration has no Borders</h2>
                                 <p class="portfolio-card__text">Веб-сайт</p>
@@ -228,20 +276,26 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/limited-ed-370x294.jpg 1x, ./images/portfolio/limited-ed-370x294@2x.jpg 2x" media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/limited-ed-354x294.jpg 1x, ./images/portfolio/limited-ed-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/limited-ed-370x294.jpg 1x, ./images/portfolio/limited-ed-370x294@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/limited-ed-354x294.jpg 1x, ./images/portfolio/limited-ed-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/limited-ed-450x294.jpg 1x, ./images/portfolio/limited-ed-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/limited-ed-450x294.jpg 1x, ./images/portfolio/limited-ed-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/limited-ed-450x294.jpg" alt="Книга в развернутом виде">
+                                    <img class="img" src="./images/portfolio/limited-ed-450x294.jpg"
+                                        alt="Книга в развернутом виде">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam fugit cumque enim,
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Earum nam fugit cumque enim,
                                         incidunt officia necessitatibus dolor natus quia dolorem quisquam
                                         consequatur beatae iusto!</p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
                                 <h2 class="portfolio-card__title">Издание <span lang="en">Limited Edition</span></h2>
                                 <p class="portfolio-card__text">Дизайн</p>
@@ -252,20 +306,25 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/lab-370x294.jpg 1x, ./images/portfolio/lab-370x294@2x.jpg 2x" media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/lab-354x294.jpg 1x, ./images/portfolio/lab-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/lab-370x294.jpg 1x, ./images/portfolio/lab-370x294@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/lab-354x294.jpg 1x, ./images/portfolio/lab-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/lab-450x294.jpg 1x, ./images/portfolio/lab-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/lab-450x294.jpg 1x, ./images/portfolio/lab-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
                                     <img class="img" src="./images/portfolio/lab-450x294.jpg" alt="Бирка с надписью">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam fugit cumque enim,
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Earum nam fugit cumque enim,
                                         incidunt officia voluptas odit aperiam dolores odio quisquam
                                         consequatur beatae iusto!</p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
                                 <h2 class="portfolio-card__title">Проект <span lang="en">LAB</span></h2>
                                 <p class="portfolio-card__text">Маркетинг</p>
@@ -276,26 +335,32 @@
                         <a href="#" class="portfolio-card__link">
                             <div class="portfolio-card__thumb">
                                 <picture>
-                                    <source srcset="./images/portfolio/gr-business-370x294.jpg 1x, ./images/portfolio/gr-business-370x294@2x.jpg 2x" media="(min-width: 1200px)">
-                                    <source srcset="./images/portfolio/gr-business-354x294.jpg 1x, ./images/portfolio/gr-business-354x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/gr-business-370x294.jpg 1x, ./images/portfolio/gr-business-370x294@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/gr-business-354x294.jpg 1x, ./images/portfolio/gr-business-354x294@2x.jpg 2x"
                                         media="(min-width: 768px)">
-                                    <source srcset="./images/portfolio/gr-business-450x294.jpg 1x, ./images/portfolio/gr-business-450x294@2x.jpg 2x"
+                                    <source
+                                        srcset="./images/portfolio/gr-business-450x294.jpg 1x, ./images/portfolio/gr-business-450x294@2x.jpg 2x"
                                         media="(max-width: 767px)">
-                                    <img class="img" src="./images/portfolio/gr-business-450x294.jpg" alt="Открытый ноутбук с веб-сайтом на мониторе">
+                                    <img class="img" src="./images/portfolio/gr-business-450x294.jpg"
+                                        alt="Открытый ноутбук с веб-сайтом на мониторе">
                                 </picture>
                                 <div class="overlay">
-                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam fugit cumque enim,
+                                    <p class="overlay__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Earum nam fugit cumque enim,
                                         incidunt officia necessitatibus dolor natus quia dolorem quisquam
                                         consequatur beatae iusto!</p>
                                 </div>
                             </div>
-                            
+
                             <div class="portfolio-card__body">
                                 <h2 class="portfolio-card__title" lang="en">Growing Business</h2>
                                 <p class="portfolio-card__text">Приложение</p>
                             </div>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </section>
@@ -304,29 +369,31 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container container--footer">
-    
+
             <div class="footer__contact">
                 <!-- Main info -->
                 <div class="footer__wrap">
-    
+
                     <!-- Footer Logo -->
                     <a class="logo footer__logo" href="./index.html" lang="en"><span
                             class="logo--accent">Web</span>Studio</a>
-    
+
                     <!-- Address and contacts -->
                     <address>
                         <ul class="footer__main-info">
-                            <li class="footer__item"><a class="footer__address" href="https://goo.gl/maps/BrZeRLE5wpfTbAKm7"
-                                    rel="nofollow noopener noreferrer">г. Киев, пр-т
+                            <li class="footer__item"><a class="footer__address"
+                                    href="https://goo.gl/maps/BrZeRLE5wpfTbAKm7" rel="nofollow noopener noreferrer">г.
+                                    Киев, пр-т
                                     Леси Украинки, 26</a></li>
                             <li class="footer__item"><a href="mailto:info@devstudio.com"
                                     class="footer__link">info@devstudio.com</a></li>
-                            <li class="footer__item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a>
+                            <li class="footer__item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11
+                                    11</a>
                             </li>
                         </ul>
                     </address>
                 </div>
-    
+
                 <!-- Socials -->
                 <div class="footer__wrap">
                     <strong class="footer__title">присоединяйтесь</strong>
@@ -362,7 +429,7 @@
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Subscribe -->
             <div class="footer__form">
                 <form action="#" class="subs-form js-speaker-form">
@@ -377,7 +444,7 @@
                     </div>
                 </form>
             </div>
-    
+
         </div>
     </footer>
 
@@ -388,15 +455,16 @@
                 <use class="icon-cross" href="./images/icons.svg#cross"></use>
             </svg>
         </button>
-    
+
         <div class="menu__top">
             <ul class="menu">
                 <li class="menu__item"><a href="./index.html" class="menu__link">Студия</a></li>
-                <li class="menu__item"><a href="./portfolio.html" class="menu__link menu__item--current">Портфолио</a></li>
+                <li class="menu__item"><a href="./portfolio.html" class="menu__link menu__item--current">Портфолио</a>
+                </li>
                 <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
             </ul>
         </div>
-    
+
         <div class="menu__bottom">
             <ul class="contact">
                 <li class="contact__item">
@@ -406,7 +474,7 @@
                     <a href="mailto:info@devstudio.com" class="contact__link">info@devstudio.com</a>
                 </li>
             </ul>
-    
+
             <!-- Mobile Social -->
             <ul class="menu-social">
                 <li class="menu-social__item">
@@ -426,10 +494,12 @@
     </div>
 
     <script src="./js/header-fixed.js"></script>
+    <script src="./js/index.js" type="module"></script>
     <script src="./js/js-speaker-form.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
     <script defer src="js/mobile-menu.js"></script>
 </body>
+
 </html>
